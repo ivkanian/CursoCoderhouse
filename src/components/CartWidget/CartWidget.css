@@ -1,0 +1,36 @@
+.container {
+    width: 30px;
+    height: 20px;
+    color: white;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 10px 10px;
+    margin-top: 10.5px;
+    margin-bottom: 10.5px;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+/* From https://css.glass */
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+
+}
+
+/* Resize images */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+}
