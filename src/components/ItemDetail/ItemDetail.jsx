@@ -14,9 +14,6 @@ const ItemDetail = ({ img, name, category, price, description }) => {
             <p className="price"> ${price}</p>
             <p className= "description ">{description}</p> 
             <Counter/>
-            <div>
-            <button>Añadir al carrito</button>
-            </div>
             <Link to=  {`/category/${category}`}>
          <h4>{category}</h4>
          </Link>
