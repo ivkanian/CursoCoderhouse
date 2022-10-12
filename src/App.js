@@ -1,34 +1,25 @@
 import './App.css';
-import React from 'react';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Counter from './components/Counter/Counter';
-import Calculator from './components/Calculator/Calculator';
-import Effect from './components/Effect/Effect';
-import ItemCount from './components/ItemCount/ItemCount';
-
-const handleOnAdd=()=>{
-console.log('Funciona')
-}
+import ItemDetailContainer from './components/ItemDetailContainer/itemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
-    return(
-  <div className='App'>
-        <Navbar/>
-        <ItemListContainer greeting={'Welcome'}/>
-        <ItemCount stock={'Stock de 8'} Onadd={handleOnAdd}/>
-        {/*<Counter/>
-        <Calculator/>
-    <Effect/>*/}
-  </div>
-    )
+  return (
+    <div className="App">
+      <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path= '/' element= {<ItemListContainer/>} />
+        <Route path='/category/:categoryId'element={<ItemListContainer/>}/>
+        <Route path = '/gameid/:gameId' element= {<ItemDetailContainer/>}/>
+        <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+      </Routes>
+      </BrowserRouter>
+      
+     
+    </div>
+  )
 }
 
 export default App;
-

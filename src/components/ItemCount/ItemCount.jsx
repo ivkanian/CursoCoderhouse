@@ -9,20 +9,26 @@ const ItemCount = ({stock,Onadd}) => {
 const [count, setcount] = useState(0)
 
 const increment=()=>{
-    if (stock!=0 && count<ItemCount.stock ) {
+    if (count<stock) {
         setcount(count+1)
     }
     else{
         alert('No hay mas stock')
+    //console.log(stock)
+    //console.log(count)
+        
     }
+
     
 }
 const decrement=()=>{
-    if (count<=stock && count>0){
+    if (count<=stock && count !=0){
     setcount(count-1)
     }
     else{
         alert('No queda mas nada en el carro')
+        // console.log(stock)
+        //console.log(count)
     }
 }
 
@@ -30,7 +36,7 @@ const decrement=()=>{
   return (
     <div>
         <h5>Juego Ps5</h5>
-        <h2>{stock}</h2>
+        <h2>Cantidad de stock {stock}</h2>
         <h2>{count}</h2>
         <button onClick={increment}>Sumar al carrito</button>
         <button onClick={decrement}>Sacar del carrito</button>
