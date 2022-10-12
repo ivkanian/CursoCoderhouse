@@ -1,7 +1,7 @@
 import'../../asyncMock'
 import Counter from '../Counter/Counter'
 import './itemDetail.css'
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+
 
 
 const ItemDetail = ({ img, name, category, price, description }) => {
@@ -12,7 +12,7 @@ const ItemDetail = ({ img, name, category, price, description }) => {
             <h1 className="name">{name}</h1>
             <h3 className="category">{category}</h3>
             <p className="price"> ${price}</p>
-            <p className= "description ">{description}</p> 
+            <p className= "degggggggggggggggggggggggggggggggggggggggggggggggggggggggscription ">{description}</p> 
             <button>Añadir al carrito</button>
         </div> 
 
