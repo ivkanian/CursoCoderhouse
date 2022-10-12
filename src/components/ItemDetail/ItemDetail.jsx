@@ -12,7 +12,7 @@ const ItemDetail = ({ img, name, category, price, description }) => {
             <h1 className="name">{name}</h1>
             <h3 className="category">{category}</h3>
             <p className="price"> ${price}</p>
-            <p className= "degggggggggggggggggggggggggggggggggggggggggggggggggggggggscription ">{description}</p> 
+            <p className= "description ">{description}</p> 
             <button>Añadir al carrito</button>
         </div> 
 
